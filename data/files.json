@@ -3,74 +3,38 @@
     {
       "id": "f1",
       "moduleId": "m1",
-      "title": "Mathematics 1 - Complete Course",
+      "title": "Chapter One - Complexity ",
       "type": "Course",
       "size": "3.2 MB",
       "url": "/assets/files/math1-course.pdf",
-      "uploadDate": "2023-10-15"
+      "uploadDate": "2025-11-04"
     },
     {
-      "id": "f2",
+      "id": "f1",
       "moduleId": "m1",
-      "title": "Algebra Exercises with Solutions",
-      "type": "TD",
-      "size": "1.8 MB",
-      "url": "/assets/files/algebra-exercises.pdf",
-      "uploadDate": "2023-10-20"
-    },
-    {
-      "id": "f3",
-      "moduleId": "m2",
-      "title": "Python Programming Guide",
-      "type": "Book",
-      "size": "5.1 MB",
-      "url": "/assets/files/python-guide.pdf",
-      "uploadDate": "2023-10-18"
-    },
-    {
-      "id": "f4",
-      "moduleId": "m2",
-      "title": "Programming Practical Work",
-      "type": "TP",
-      "size": "2.3 MB",
-      "url": "/assets/files/programming-tp.pdf",
-      "uploadDate": "2023-10-22"
-    },
-    {
-      "id": "f5",
-      "moduleId": "m4",
-      "title": "Algorithms Textbook",
-      "type": "Book",
-      "size": "4.2 MB",
-      "url": "/assets/files/algorithms-textbook.pdf",
-      "uploadDate": "2023-10-25"
-    },
-    {
-      "id": "f6",
-      "moduleId": "m4",
-      "title": "Data Structures Summary",
-      "type": "Summary",
-      "size": "1.1 MB",
-      "url": "/assets/files/ds-summary.pdf",
-      "uploadDate": "2023-10-28"
-    },
-    {
-      "id": "f7",
-      "moduleId": "m5",
-      "title": "Database Final Exam 2022",
-      "type": "Exam",
-      "size": "0.8 MB",
-      "url": "/assets/files/db-exam-2022.pdf",
-      "uploadDate": "2023-11-01"
-    },
-    {
-      "id": "f8",
-      "moduleId": "m6",
-      "title": "Software Engineering Project Guide",
+      "title": "Chapter Two - sorting  ",
       "type": "Course",
-      "size": "2.7 MB",
-      "url": "/assets/files/se-project-guide.pdf",
-      "uploadDate": "2023-11-05"
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f1",
+      "moduleId": "m1",
+      "title": "Chapter Three - trees  ",
+      "type": "Course",
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f1",
+      "moduleId": "m1",
+      "title": "Chapter One - Complexity ",
+      "type": "TD",
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
     }
   ]
 }
