@@ -410,21 +410,21 @@ function getModuleById(moduleId) {
     return modules[moduleId] || { name: 'Unknown Module', semester: 'Unknown', level: 'Unknown' };
 }
 
-function getFileCountByModule(moduleId) {
-    // This would typically count files in files.json
-    // For now, we'll use placeholder counts
-    const counts = {
-        'm1': 8,
-        'm2': 6,
-        'm3': 5,
-        'm4': 7,
-        'm5': 9,
-        'm6': 4,
-        'm7': 5
-    };
-    
-    return counts[moduleId] || 0;
+ let filesData = null;
+
+fetch('/data/files.json')  
+  .then(res => res.json())
+  .then(data => {
+      filesData = data.files;
+  })
+  .catch(err => console.error('Error loading files:', err));
+
+ function getFileCountByModule(moduleId) {
+    if (!filesData) return 0;  
+    const files = filesData.filter(file => file.moduleId.toLowerCase() === moduleId.toLowerCase());
+    return files.length;
 }
+
 
 function createFileCard(file, module) {
     const card = document.createElement('div');

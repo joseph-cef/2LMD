@@ -6,31 +6,94 @@
       "title": "Chapter One - Complexity ",
       "type": "Course",
       "size": "3.2 MB",
-      "url": "/assets/files/math1-course.pdf",
+      "url": "assets/modules/L2/Algorithms/Course/chap1-complexity.pdf",
       "uploadDate": "2025-11-04"
     },
     {
-      "id": "f1",
+      "id": "f2",
       "moduleId": "m1",
       "title": "Chapter Two - sorting  ",
       "type": "Course",
       "size": "3.2 MB",
-      "url": "/assets/files/math1-course.pdf",
+      "url": "assets/modules/L2/Algorithms/Course/chap2-sorting.pdf",
       "uploadDate": "2025-11-04"
     },
     {
-      "id": "f1",
+      "id": "f3",
       "moduleId": "m1",
       "title": "Chapter Three - trees  ",
+      "type": "Course",
+      "size": "3.2 MB",
+      "url": "assets/modules/L2/Algorithms/Course/chap3-trees.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f4",
+      "moduleId": "m1",
+      "title": "TD01 - Complexity ",
+      "type": "TD",
+      "size": "3.2 MB",
+      "url": "assets/modules/L2/Algorithms/TD/DT1_Complexity.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f5",
+      "moduleId": "m1",
+      "title": "TD02 - Sorting ",
+      "type": "TD",
+      "size": "3.2 MB",
+      "url": "assets/modules/L2/Algorithms/TD/fiche_td2_tris.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f6",
+      "moduleId": "m1",
+      "title": "TD03 - Trees ",
+      "type": "TD",
+      "size": "3.2 MB",
+      "url": "assets/modules/L2/Algorithms/TD/fiche_td3_arbres.pdf",
+      "uploadDate": "2025-11-04"
+    },
+      {
+      "id": "f7",
+      "moduleId": "m2",
+      "title": "Chapter 1: Propositional Logic - Part I (Introduction and Syntax)",
       "type": "Course",
       "size": "3.2 MB",
       "url": "/assets/files/math1-course.pdf",
       "uploadDate": "2025-11-04"
     },
     {
-      "id": "f1",
-      "moduleId": "m1",
-      "title": "Chapter One - Complexity ",
+      "id": "f8",
+      "moduleId": "m2",
+      "title": "Chapter1: Propositional Logic –PartII-1 (Semantics Study)",
+      "type": "Course",
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f9",
+      "moduleId": "m2",
+      "title": "Chapter 1: Propositional Logic-PartII-2 (Semantic Study)  ",
+      "type": "Course",
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f10",
+      "moduleId": "m2",
+      "title": "Chapter 1: Propositional Logic: Part III (Theory Of Demonstration) ",
+      "type": "Course",
+      "size": "3.2 MB",
+      "url": "/assets/files/math1-course.pdf",
+      "uploadDate": "2025-11-04"
+    },
+    {
+      "id": "f11",
+      "moduleId": "m2",
+      "title": "Tutorial 1 and additional exercises ",
       "type": "TD",
       "size": "3.2 MB",
       "url": "/assets/files/math1-course.pdf",
