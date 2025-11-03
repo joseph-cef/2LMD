@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Year (L1) - University Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- Navigation (same as index.html) -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center">
+                <i class="fas fa-graduation-cap mr-2"></i>
+                <span>UniResources</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link font-medium text-blue-600 dark:text-blue-400" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.news">News</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-700 rounded-md shadow-lg py-1 hidden group-hover:block z-10 border border-gray-200 dark:border-gray-600">
+                        <button data-lang="en" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">English</button>
+                        <button data-lang="fr" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">Français</button>
+                        <button data-lang="ar" class="lang-btn rtl block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">العربية</button>
+                    </div>
+                </div>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 py-2 px-4 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link px-3 py-2 rounded-md bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-300 transition-colors" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.news">News</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4" data-key="l1.title">First Year (L1)</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-key="l1.description">Access all resources for the first year of study. Choose a semester to explore available modules and materials.</p>
+        </div>
+        
+        <!-- Semesters -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Semester 1 -->
+            <a href="s1.html" class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-blue-500">
+                <div class="w-24 h-24 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl font-bold text-blue-600 dark:text-blue-400">S1</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" data-key="l1.semester1">Semester 1</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6" data-key="l1.semester1Desc">Fundamental courses and introductory modules</p>
+                <div class="flex justify-center items-center text-blue-600 dark:text-blue-400">
+                    <span class="font-medium mr-2" data-key="l1.viewModules">View Modules</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+            
+            <!-- Semester 2 -->
+            <a href="s2.html" class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 border-transparent hover:border-green-500">
+                <div class="w-24 h-24 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl font-bold text-green-600 dark:text-green-400">S2</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" data-key="l1.semester2">Semester 2</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-6" data-key="l1.semester2Desc">Advanced fundamental courses and specialization introduction</p>
+                <div class="flex justify-center items-center text-green-600 dark:text-green-400">
+                    <span class="font-medium mr-2" data-key="l1.viewModules">View Modules</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div class="mt-16 bg-white dark:bg-gray-800 rounded-xl shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6 text-center" data-key="l1.resourcesOverview">Resources Overview</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2" id="l1-total-files">0</div>
+                    <p class="text-gray-600 dark:text-gray-300" data-key="l1.totalFiles">Total Files</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-green-600 dark:text-green-400 mb-2" id="l1-modules">12</div>
+                    <p class="text-gray-600 dark:text-gray-300" data-key="l1.modules">Modules</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2" id="l1-books">45</div>
+                    <p class="text-gray-600 dark:text-gray-300" data-key="l1.books">Books</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2" id="l1-exams">28</div>
+                    <p class="text-gray-600 dark:text-gray-300" data-key="l1.exams">Exams</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+  <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        <span>UniResources</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4 max-w-md" data-key="footer.aboutDesc">A comprehensive platform for university students to access academic resources, courses, and materials.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.quickLinks">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.home"></a></li>
+                        <li><a href="l1.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l1"></a></li>
+                        <li><a href="l2.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l2"></a></li>
+                        <li><a href="l3.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l3"></a></li>
+                        <li><a href="news.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.news"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.contact"></h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span data-key="footer.email"></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span data-key="footer.phone"></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span data-key="footer.address"> </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-key="footer.copyright"></p>
+            </div>
+        </div>
+    </footer
+
+    <script src="/js/app.js"></script>
+    <script>
+        // Load L1 stats
+        document.addEventListener('DOMContentLoaded', function() {
+            loadL1Stats();
+        });
+
+        function loadL1Stats() {
+            // In a real implementation, this would fetch actual data
+            // For now, we'll use placeholder values
+            document.getElementById('l1-total-files').textContent = '320';
+            document.getElementById('l1-modules').textContent = '12';
+            document.getElementById('l1-books').textContent = '45';
+            document.getElementById('l1-exams').textContent = '28';
+        }
+    </script>
+</body>
+</html>

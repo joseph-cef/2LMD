@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 2 (S2) - University Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center">
+                <i class="fas fa-graduation-cap mr-2"></i>
+                <span>UniResources</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.news">News</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-700 rounded-md shadow-lg py-1 hidden group-hover:block z-10 border border-gray-200 dark:border-gray-600">
+                        <button data-lang="en" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">English</button>
+                        <button data-lang="fr" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">Français</button>
+                        <button data-lang="ar" class="lang-btn rtl block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">العربية</button>
+                    </div>
+                </div>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 py-2 px-4 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.news">News</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <nav class="flex mb-4 text-sm text-gray-600 dark:text-gray-400">
+                <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.home">Home</a>
+                <span class="mx-2">/</span>
+                <a href="l1.html" class="hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l1">L1</a>
+                <span class="mx-2">/</span>
+                <span class="text-blue-600 dark:text-blue-400">Semester 2</span>
+            </nav>
+            
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold" data-key="s2.title">Semester 2 (S2)</h1>
+                    <p class="text-gray-600 dark:text-gray-300 mt-2" data-key="s2.description"></p>
+                </div>
+                <div class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-lg font-medium">
+                    L1 - S2
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modules Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Modules will be loaded dynamically -->
+        </div>
+        
+        <!-- No Modules Message -->
+        <div id="no-modules" class="hidden text-center py-12">
+            <i class="fas fa-folder-open text-5xl text-gray-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2" data-key="s2.noModules">No Modules Available</h3>
+            <p class="text-gray-600 dark:text-gray-400" data-key="s2.noModulesDesc">There are currently no modules available for this semester.</p>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        <span>UniResources</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4 max-w-md" data-key="footer.aboutDesc"></p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.quickLinks">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.home"></a></li>
+                        <li><a href="l1.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l1"></a></li>
+                        <li><a href="l2.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l2"></a></li>
+                        <li><a href="l3.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l3"></a></li>
+                        <li><a href="news.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.news"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.contact"></h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span data-key="footer.email"></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span data-key="footer.phone"></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span data-key="footer.address"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-key="footer.copyright"></p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/app.js"></script>
+    <script>
+        // Load S2 modules
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSemesterModules('S2');
+        });
+
+        function loadSemesterModules(semester) {
+            fetch('/data/modules.json')
+                .then(response => response.json())
+                .then(data => {
+                    const semesterModules = data.modules.filter(module => module.semester === semester);
+                    const container = document.querySelector('.grid');
+                    const noModules = document.getElementById('no-modules');
+                    
+                    if (semesterModules.length === 0) {
+                        container.classList.add('hidden');
+                        noModules.classList.remove('hidden');
+                        return;
+                    }
+                    
+                    container.innerHTML = '';
+                    
+                    semesterModules.forEach(module => {
+                        const moduleCard = createModuleCard(module);
+                        container.appendChild(moduleCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading modules:', error);
+                    document.querySelector('.grid').classList.add('hidden');
+                    document.getElementById('no-modules').classList.remove('hidden');
+                });
+        }
+
+        function createModuleCard(module) {
+            const card = document.createElement('div');
+            card.className = 'bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700';
+            
+            const fileCount = getFileCountByModule(module.id);
+            
+            card.innerHTML = `
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold">${module.name}</h3>
+                    <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm px-2 py-1 rounded">${module.semester}</span>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">${module.description}</p>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">
+                        <i class="fas fa-file mr-1"></i>
+                        ${fileCount} <span data-key="module.files">files</span>
+                    </span>
+                    <a href="module.html?m=${module.id}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors" data-key="module.view">
+                        View Resources
+                    </a>
+                </div>
+            `;
+            
+            return card;
+        }
+    </script>
+</body>
+</html>

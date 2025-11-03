@@ -1,0 +1,11 @@
+{
+  "news": [
+    {
+      "id": "n1",
+      "title": "Experimental Site Notice",
+      "date": "2025-11-04",
+      "category": "Announcements",
+      "description": "This website is currently a test version (Front-End only). It was created temporarily to organize files and modules and does not represent a complete project yet."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "modules": [
+    {
+      "id": "m1",
+      "name": "Mathematics 1",
+      "semester": "S1",
+      "level": "L1",
+      "description": "Fundamental mathematical concepts including algebra, calculus, and analytical geometry."
+    },
+    {
+      "id": "m2",
+      "name": "Programming Fundamentals",
+      "semester": "S1",
+      "level": "L1",
+      "description": "Introduction to programming concepts using a high-level programming language."
+    },
+    {
+      "id": "m3",
+      "name": "Computer Architecture",
+      "semester": "S1",
+      "level": "L1",
+      "description": "Basic concepts of computer organization and architecture."
+    },
+    {
+      "id": "m4",
+      "name": "Algorithms and Data Structures",
+      "semester": "S3",
+      "level": "L2",
+      "description": "Study of fundamental algorithms and data structures for efficient problem solving."
+    },
+    {
+      "id": "m5",
+      "name": "Database Management Systems",
+      "semester": "S4",
+      "level": "L2",
+      "description": "Principles of database design, implementation, and management."
+    },
+    {
+      "id": "m6",
+      "name": "Software Engineering",
+      "semester": "S5",
+      "level": "L3",
+      "specialization": "ISIL",
+      "description": "Software development methodologies, project management, and quality assurance."
+    },
+    {
+      "id": "m7",
+      "name": "Network Security",
+      "semester": "S5",
+      "level": "L3",
+      "specialization": "SI",
+      "description": "Principles of network security, cryptography, and secure communication protocols."
+    }
+  ]
+}

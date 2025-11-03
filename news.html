@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University News - UniResources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 dark:text-blue-400 flex items-center">
+                <i class="fas fa-graduation-cap mr-2"></i>
+                <span>UniResources</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link font-medium hover:text-blue-600 dark:hover:text-blue-400" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link font-medium text-blue-600 dark:text-blue-400" data-key="nav.news">News</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Language Switcher -->
+                <div class="relative group">
+                    <button class="flex items-center space-x-1 px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang">EN</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute right-0 mt-2 w-32 bg-white dark:bg-gray-700 rounded-md shadow-lg py-1 hidden group-hover:block z-10 border border-gray-200 dark:border-gray-600">
+                        <button data-lang="en" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">English</button>
+                        <button data-lang="fr" class="lang-btn block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">Français</button>
+                        <button data-lang="ar" class="lang-btn rtl block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors">العربية</button>
+                    </div>
+                </div>
+                
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 py-2 px-4 border-t border-gray-200 dark:border-gray-700">
+            <div class="flex flex-col space-y-2">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.home">Home</a>
+                <a href="l1.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l1">L1</a>
+                <a href="l2.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l2">L2</a>
+                <a href="l3.html" class="nav-link px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" data-key="nav.l3">L3</a>
+                <a href="news.html" class="nav-link px-3 py-2 rounded-md bg-blue-50 dark:bg-blue-900 text-blue-600 dark:text-blue-300 transition-colors" data-key="nav.news">News</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4" data-key="news.title">University News & Announcements</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto" data-key="news.description">Stay updated with the latest news, events, and announcements from the university.</p>
+        </div>
+        
+        <!-- News Filters -->
+        <div class="flex flex-wrap gap-2 mb-8 justify-center">
+            <button class="filter-btn active px-4 py-2 rounded-full bg-blue-600 text-white transition-colors" data-category="all">
+                <span data-key="news.filterAll">All</span>
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="announcement">
+                <span data-key="news.filterAnnouncements">Announcements</span>
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="exams">
+                <span data-key="news.filterExams">Exams</span>
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="resources">
+                <span data-key="news.filterResources">Resources</span>
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors" data-category="event">
+                <span data-key="news.filterEvents">Events</span>
+            </button>
+        </div>
+        
+        <!-- News Grid -->
+        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- News items will be loaded dynamically -->
+        </div>
+        
+        <!-- No News Message -->
+        <div id="no-news" class="hidden text-center py-12">
+            <i class="fas fa-newspaper text-5xl text-gray-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2" data-key="news.noNews">No News Available</h3>
+            <p class="text-gray-600 dark:text-gray-400" data-key="news.noNewsDesc">There are currently no news items available.</p>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button id="load-more" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors hidden">
+                <span data-key="news.loadMore">Load More</span>
+            </button>
+        </div>
+    </main>
+    
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        <span>UniResources</span>
+                    </h3>
+                    <p class="text-gray-300 mb-4 max-w-md" data-key="footer.aboutDesc">A comprehensive platform for university students to access academic resources, courses, and materials.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.quickLinks">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.home"></a></li>
+                        <li><a href="l1.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l1"></a></li>
+                        <li><a href="l2.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l2"></a></li>
+                        <li><a href="l3.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.l3"></a></li>
+                        <li><a href="news.html" class="text-gray-300 hover:text-white transition-colors" data-key="nav.news"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4" data-key="footer.contact"></h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span data-key="footer.email"></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span data-key="footer.phone"></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span data-key="footer.address"> </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p data-key="footer.copyright"></p>
+            </div>
+        </div>
+    </footer
+
+    <script src="/js/app.js"></script>
+    <script>
+        // News data and pagination
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        let allNews = [];
+        let filteredNews = [];
+
+        // Load news on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNews();
+            setupFilters();
+        });
+
+        function loadNews() {
+            fetch('/data/news.json')
+                .then(response => response.json())
+                .then(data => {
+                    allNews = data.news;
+                    filteredNews = [...allNews];
+                    displayNews();
+                })
+                .catch(error => {
+                    console.error('Error loading news:', error);
+                    showNoNewsMessage();
+                });
+        }
+
+        function displayNews() {
+            const container = document.getElementById('news-container');
+            const noNews = document.getElementById('no-news');
+            const loadMoreBtn = document.getElementById('load-more');
+            
+            if (filteredNews.length === 0) {
+                container.classList.add('hidden');
+                noNews.classList.remove('hidden');
+                loadMoreBtn.classList.add('hidden');
+                return;
+            }
+            
+            container.classList.remove('hidden');
+            noNews.classList.add('hidden');
+            
+            // Calculate items to show
+            const startIndex = 0;
+            const endIndex = currentPage * itemsPerPage;
+            const newsToShow = filteredNews.slice(startIndex, endIndex);
+            
+            container.innerHTML = '';
+            
+            newsToShow.forEach(newsItem => {
+                const newsCard = createNewsCard(newsItem);
+                container.appendChild(newsCard);
+            });
+            
+            // Show/hide load more button
+            if (endIndex < filteredNews.length) {
+                loadMoreBtn.classList.remove('hidden');
+            } else {
+                loadMoreBtn.classList.add('hidden');
+            }
+            
+            // Add load more event listener
+            loadMoreBtn.onclick = loadMoreNews;
+        }
+
+        function createNewsCard(newsItem) {
+            const card = document.createElement('div');
+            card.className = 'bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700';
+            
+            const categoryColors = {
+                'Announcement': 'blue',
+                'Exams': 'red',
+                'Resources': 'green',
+                'Event': 'purple'
+            };
+            
+            const color = categoryColors[newsItem.category] || 'gray';
+            
+            card.innerHTML = `
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-${color}-100 dark:bg-${color}-900 text-${color}-800 dark:text-${color}-200 px-3 py-1 rounded-full text-sm font-medium">
+                            ${newsItem.category}
+                        </span>
+                        <span class="text-gray-500 text-sm">${formatDate(newsItem.date)}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">${newsItem.title}</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">${newsItem.description}</p>
+                    <button class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors read-more-btn" data-news-id="${newsItem.id}">
+                        <span data-key="news.readMore">Read More</span> <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            `;
+            
+            // Add read more functionality
+            const readMoreBtn = card.querySelector('.read-more-btn');
+            readMoreBtn.addEventListener('click', function() {
+                showNewsDetails(newsItem);
+            });
+            
+            return card;
+        }
+
+        function setupFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-blue-600', 'text-white'));
+                    filterBtns.forEach(b => {
+                        if (!b.classList.contains('active')) {
+                            b.classList.add('bg-gray-200', 'dark:bg-gray-700');
+                        }
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active', 'bg-blue-600', 'text-white');
+                    this.classList.remove('bg-gray-200', 'dark:bg-gray-700');
+                    
+                    const category = this.getAttribute('data-category');
+                    filterNews(category);
+                });
+            });
+        }
+
+        function filterNews(category) {
+            currentPage = 1;
+            
+            if (category === 'all') {
+                filteredNews = [...allNews];
+            } else {
+                filteredNews = allNews.filter(item => 
+                    item.category.toLowerCase() === category.toLowerCase()
+                );
+            }
+            
+            displayNews();
+        }
+
+        function loadMoreNews() {
+            currentPage++;
+            displayNews();
+        }
+
+        function showNewsDetails(newsItem) {
+            // In a real implementation, this would open a modal or navigate to a details page
+            alert(`News Details:\n\nTitle: ${newsItem.title}\nDate: ${formatDate(newsItem.date)}\nCategory: ${newsItem.category}\n\nDescription: ${newsItem.description}`);
+        }
+
+        function showNoNewsMessage() {
+            document.getElementById('news-container').classList.add('hidden');
+            document.getElementById('no-news').classList.remove('hidden');
+            document.getElementById('load-more').classList.add('hidden');
+        }
+
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+    </script>
+</body>
+</html>
