@@ -364,7 +364,7 @@
             // Add download functionality
             const downloadBtn = card.querySelector('.download-btn');
             downloadBtn.addEventListener('click', function() {
-                downloadFile(file.id, file.title);
+                downloadFile(file.id, file.type);
             });
             
             return card;
@@ -443,11 +443,13 @@
             return new Date(dateString).toLocaleDateString(undefined, options);
         }
 
-        function downloadFile(fileId, fileName) {
-             const filePath = `assets/modules/L2/Algorithms/TD/${fileId}.pdf`;
+        function downloadFile(fileId, fileType) {
+            const folder = fileType.toLowerCase(); 
+            const filePath = `assets/modules/L2/Algorithms/${folder}/${fileId}.pdf`;
 
-             window.open(filePath, '_blank');
+            window.open(filePath, "_blank"); 
         }
+
 
     </script>
 </body>
