@@ -444,13 +444,11 @@
         }
 
         function downloadFile(fileId, fileName) {
-            // In a real implementation, this would trigger the actual file download
-            alert(`Downloading: ${fileName}`);
-            // You would typically use: window.location.href = `/assets/files/${fileId}.pdf`;
-            
-            // Simulate download success
-            console.log(`Downloaded file: ${fileName} (ID: ${fileId})`);
+             const filePath = `assets/modules/L2/Algorithms/TD/${fileId}.pdf`;
+
+             window.open(filePath, '_blank');
         }
+
     </script>
 </body>
 </html>
